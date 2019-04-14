@@ -18,6 +18,10 @@ const Menu = [
   {
     label: "Cards",
     pathname: "/cards"
+  },
+  {
+    label: "Match",
+    pathname: "/match"
   }
 
 ];

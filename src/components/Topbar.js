@@ -117,6 +117,9 @@ class Topbar extends Component {
     if(this.props.currentPath === '/cards') {
       return 4
     }
+    if(this.props.currentPath === '/match') {
+      return 5
+    }
 
   }
 
@@ -132,8 +135,8 @@ class Topbar extends Component {
                   <div className={classes.inline}>
                     <Typography variant="h6" color="inherit" noWrap>
                       <Link to='/' className={classes.link}>
-                        <img width={20} src={logo} alt="" />
-                        <span className={classes.tagline}>Material Sense</span>
+                        <img width={16} src={logo} alt="" />
+                        <span className={classes.tagline}>Olico</span>
                       </Link>
                     </Typography>
                   </div>
@@ -141,7 +144,7 @@ class Topbar extends Component {
                     <React.Fragment>
                       <div className={classes.productLogo}>
                         <Typography>
-                          A material UI Template
+                          agro exchange network
                         </Typography>
                       </div>
                       <div className={classes.iconContainer}>
@@ -151,7 +154,6 @@ class Topbar extends Component {
                       </div>
                       <div className={classes.tabContainer}>
                         <SwipeableDrawer anchor="right" open={this.state.menuDrawer} onClose={this.mobileMenuClose} onOpen={this.mobileMenuOpen}>
-                          <AppBar title="Menu" />
                           <List>
                             {Menu.map((item, index) => (
                               <ListItem component={Link} to={{pathname: item.pathname, search: this.props.location.search}} button key={item.label}>

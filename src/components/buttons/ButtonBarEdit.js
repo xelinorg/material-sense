@@ -15,15 +15,7 @@ const styles = theme => ({
   }
 })
 
-class ButtonBar extends Component {
-
-  handleEditClick = (e) => {
-    this.props.hanldeEdit(e)
-  }
-
-  handleDeleteClick = (e) => {
-    this.props.hanldeDelete(e)
-  }
+class ButtonBarEdit extends Component {
 
   render() {
     const { classes } = this.props;
@@ -31,22 +23,22 @@ class ButtonBar extends Component {
     return (
       <div className={classes.spaceTop}>
         <Button
+          type="reset"
           className={classes.primary}
-          onClick={this.handleDeleteClick}
         >
-          Delete
+          Cancel
         </Button>
         <Button
           variant="contained"
           color="primary"
+          type="submit"
           className={classes.secondary}
-          onClick={this.handleEditClick}
         >
-          Edit
+          Save
         </Button>
       </div>
     )
   }
 }
 
-export default withStyles(styles)(ButtonBar);
+export default withStyles(styles)(ButtonBarEdit);

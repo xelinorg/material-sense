@@ -3,6 +3,7 @@ import { Route, HashRouter, Switch } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import Wizard from './components/Wizard'
 import Cards from './components/Cards'
+import Match from './components/Match'
 import Main from './components/Main'
 import Signup from './components/Signup'
 import ScrollToTop from './components/ScrollTop'
@@ -16,6 +17,7 @@ export default props => (
           <Route exact path='/signup' component={ Signup } />
           <Route exact path='/wizard' component={ Wizard } />
           <Route exact path='/cards' component={ Cards } />
+          <Route exact path='/match' component={ Match } />
         </Switch>
       </ScrollToTop>
     </HashRouter>

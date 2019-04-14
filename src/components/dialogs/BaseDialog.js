@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 const styles = theme => ({
@@ -16,7 +15,13 @@ const styles = theme => ({
   },
   bottomMargin: {
     marginBottom: theme.spacing.unit * 2
-  }
+  },
+  stepsContainer: {
+    marginLeft: 72,
+    textAlign: 'left',
+    marginTop: 20,
+    height: 65
+  },
 });
 
 class BaseDialog extends Component {
@@ -30,13 +35,11 @@ class BaseDialog extends Component {
         aria-describedby="alert-dialog-description"
         scroll='body'
       >
-        <DialogTitle id="alert-dialog-title"></DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <div className={classes.container}>
-              {this.props.children}
-            </div>
-          </DialogContentText>
+        <DialogTitle id="alert-dialog-title"><div>title</div></DialogTitle>
+        <DialogContent id="alert-dialog-description">
+          <div className={classes.container}>
+            {this.props.children}
+          </div>
         </DialogContent>
       </Dialog>
     )
